@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<aplikace>
+  <nazev>Fitguide</nazev>
+  <uzivatel ID="123456">
+    <nickname>Hrouda</nickname>
+    
+      <jmeno>Pavel</jmeno>
+      <prijmeni>Tlustý</prijmeni>
+      <vek>27</vek>
+      <zeme_pusobeni>Česká Republika</zeme_pusobeni>
+     
+      <osobni_udaje typ="soukromé">
+        <jmeno>Pavel</jmeno>
+        <prijmeni>Tlustý</prijmeni>
+        <vyska_cm>172</vyska_cm>
+        <vaha_kg>91</vaha_kg>
+        <dat_nar>27.08.1989</dat_nar>
+        <sedave_zamestnani>true</sedave_zamestnani>
+        <vysoky_tk>true</vysoky_tk>
+        <bmi typ_z="zvýšené">
+          <hodnota>30,76</hodnota>
+          <kategorie>obezita 1. stupně</kategorie>
+          <zdravotni_riziko>zvýšené</zdravotni_riziko>
+        </bmi>
+      </osobni_udaje>
+    
+      <kontakt>
+        <facebook>Pája Tlustý</facebook>
+        <email>ptlust@seznam.cz</email>
+      </kontakt>
+      <hlavni_oddil>
+        <aktivity poradi="7">
+          <druh_pohybu>běh</druh_pohybu>
+          <distance_km>3</distance_km>
+          <cas_minuty>40</cas_minuty>
+          <dopocty stroj="kalkulacka">
+            <spalene_kcal>135</spalene_kcal>
+            <tepova_frq>145</tepova_frq>
+            <vypoceno_l>1,6</vypoceno_l>
+          </dopocty>
+        </aktivity>
+        
+        <trener ID="456789">
+          <nickname>Peťan</nickname>
+          
+            <jmeno>Petr</jmeno>
+            <prijmeni>Koukal</prijmeni>
+            <vek>30</vek>
+            <zeme_pusobeni>Česká Republika</zeme_pusobeni>
+          <kontakt>
+            <email>petan@fitguide.com</email>
+            <telefon num="CZ">
+              <zeme>Česká Republika</zeme>
+              <typ>mobilní telefon</typ>
+              <cislo>776467489</cislo>
+            </telefon>
+          </kontakt>
+          <vytizenost>
+            <plna_kapacita>false</plna_kapacita>
+            <volna_mista>true</volna_mista>
+          </vytizenost>
+          <specializace>kardio</specializace>
+          <vzdelani typ_vz="vysokoškolské">
+            <stupen>magistr</stupen>
+            <skola>Univerzita Karlova</skola>
+            <fakulta>Fakulta tělesné výchovy a sportu</fakulta>
+            <rok_ukonceni>2015</rok_ukonceni>
+            <praxe_v_oboru_roky>4</praxe_v_oboru_roky>
+          </vzdelani>
+          
+        </trener>
+      </hlavni_oddil>
+    
+    <ochrana_soukromi level="high">
+      <viditelnost_profil>true</viditelnost_profil>
+      <viditelnost_jmeno>true</viditelnost_jmeno>
+      <viditelnost_prijmeni>true</viditelnost_prijmeni>
+      <viditelnost_vek>true</viditelnost_vek>
+      <viditelnost_zeme_pusobeni>true</viditelnost_zeme_pusobeni>
+      <navstevnik>
+        <viditelnost_profil>true</viditelnost_profil>
+        <viditelnost_osobni_udaje>false</viditelnost_osobni_udaje>
+      </navstevnik>
+    </ochrana_soukromi>
+  </uzivatel>
+</aplikace>
