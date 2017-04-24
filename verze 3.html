@@ -1,0 +1,343 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <style>
+        h1 {color:darkgreen}
+        body {background:white}
+    </style>
+    <title>
+        Fitguide
+    </title>
+</head>
+<body>
+    <header>
+        <h1 id="nazev" align="center"><big><u>Dokumentace</u></big></h1>
+        <h1 align="center">Fitguide</h1>
+        <nav>
+            <ol>
+                <li><a href="#nazev"> Název </a></li>
+                <li><a href="#uvod"> Úvod </a></li>
+                <li><a href="#postupy"> Postupy </a></li>
+                <li><a href="#elementy"> Popis jednotlivých elementů a atributů </a></li>
+                <li><a href="#transformace"> Transformace </a></li>
+                <li><a href="#zaver"> Závěr </a></li>
+                <li><a href="#dodatek"> dodatek </a></li>
+            </ol>
+        </nav>
+    </header>
+    <section>
+        <article>
+            <h2 align="left" id="uvod"> Úvod </h2>
+            <p>
+                Dobrý den, pro můj projekt pro předmět Značkovací jazyky jsem si vybrala zpracování fiktivní sportovní aplikace "Fitguide". Je to aplikace, která svým uživatelům pomáhá správně a zdravě cvičit a zlepšit své zdraví. Uživatel si tam může zadávat své sportovní výkony a potom zjistí, jaké měly účinek. Uživateli je také přidělen trenér, který na výkony uživatele dohlíží.
+            </p>
+        </article>
+    </section>
+    <section>
+        <article>
+            <h2 align="left" id="postupy"> Postupy </h2>
+            <p>
+                Tento projekt jsem začala vymyšlením o jakou aplikaci půjde. Jelikož zatím s aplikacemi vůbec zkušenosti nemám, v rámci jejich struktury a tvorby, musela sem vyjít z aplikací, které jsou mi známé a jejich fungování si prostě domyslet.<br />Když jsem si rozmyslela, že půjde o aplikaci týkající se sportovní podpory, začala jsem souborem xml, kterým to všechno začalo a zbytek se odvíjel právě od něj.<br />Poté následoval soubor xsd, nato navázal soubor xslt a nakonec píšu tuto dokumentaci do souboru html.
+            </p>
+        </article>
+    </section>
+    <section>
+        <article>
+            <h2 align="left" id="elementy"> Popis jednotlivých elementů a atributů </h2>
+            <table align="center" border="2" title="SEZNAM A POPIS JEDNOTLIVÝCH ELEMENTŮ A ATRIBUTŮ">
+                <tr>
+                    <td><strong>ELEMENT / ATRIBUT</strong></td>
+                    <td><strong>POPIS</strong></td>
+                </tr>
+                <tr>
+                    <td>aplikace</td>
+                    <td>Obsahuje jednotlivé uživatele</td>
+                </tr>
+                <tr>
+                    <td>nazev</td>
+                    <td>název aplikace</td>
+                </tr>
+                <tr>
+                    <td>uzivatel</td>
+                    <td>konkrétní uživatel</td>
+                </tr>
+                <tr>
+                    <td>nickname</td>
+                    <td>nickname, specifický pro každého uživatele</td>
+                </tr>
+                <tr>
+                    <td>jmeno</td>
+                    <td>jméno uživatele</td>
+                </tr>
+                <tr>
+                    <td>prijmeni</td>
+                    <td>příjmení uživatele</td>
+                </tr>
+                <tr>
+                    <td>vek</td>
+                    <td>věk uživatele</td>
+                </tr>
+                <tr>
+                    <td>zeme_pusobeni</td>
+                    <td>země, ve které uživatel působí</td>
+                </tr>
+                <tr>
+                    <td>osobni_udaje</td>
+                    <td>osobní údaje</td>
+                </tr>
+                <tr>
+                    <td>vyska_cm</td>
+                    <td>výška osoby v centimetrech</td>
+                </tr>
+                <tr>
+                    <td>vaha_kg</td>
+                    <td>váha osoby v kilogramech</td>
+                </tr>
+                <tr>
+                    <td>dat_nar</td>
+                    <td>datum narození</td>
+                </tr>
+                <tr>
+                    <td>sedave_zamestnani</td>
+                    <td>má uživatel sedavé zaměstnání?</td>
+                </tr>
+                <tr>
+                    <td>vysoky_tk</td>
+                    <td>má uživatel vysoký krevní tlak?</td>
+                </tr>
+                <tr>
+                    <td>bmi</td>
+                    <td>bosy mass index</td>
+                </tr>
+                <tr>
+                    <td>hodnota</td>
+                    <td>hodnota</td>
+                </tr>
+                <tr>
+                    <td>kategorie</td>
+                    <td>kategorie, do které se uživatel řadí v závislosti<br /> na bmi</td>
+                </tr>
+                <tr>
+                    <td>zdravotni_riziko</td>
+                    <td>jaké má uživatel s tímto bmi zdravotní riziko</td>
+                </tr>
+                <tr>
+                    <td>kontakt</td>
+                    <td>kontakty</td>
+                </tr>
+                <tr>
+                    <td>facebook</td>
+                    <td>účet v aplikaci facebook</td>
+                </tr>
+                <tr>
+                    <td>email</td>
+                    <td>emailová adresa</td>
+                </tr>
+                <tr>
+                    <td>hlavni_oddil</td>
+                    <td>hlavní oddíl</td>
+                </tr>
+                <tr>
+                    <td>aktivity</td>
+                    <td>aktivity uživatele</td>
+                </tr>
+                <tr>
+                    <td>druh_pohybu</td>
+                    <td>druh pohybu</td>
+                </tr>
+                <tr>
+                    <td>prevyseni_m</td>
+                    <td>převýšení na trati v metrech</td>
+                </tr>
+                <tr>
+                    <td>distance_km</td>
+                    <td>distance v kilometrech</td>
+                </tr>
+                <tr>
+                    <td>cas_minuty</td>
+                    <td>čas, který distance trvala v minutách</td>
+                </tr>
+                <tr>
+                    <td>dopocty</td>
+                    <td>dopočty údajů, ze zadaných</td>
+                </tr>
+                <tr>
+                    <td>rychlost_kmh</td>
+                    <td>průměrná rychlost v kilometrech v hodině</td>
+                </tr>
+                <tr>
+                    <td>spalene_kcal</td>
+                    <td>spálené kilokalorie</td>
+                </tr>
+                <tr>
+                    <td>tepova_frq</td>
+                    <td>tepová frekvence</td>
+                </tr>
+                <tr>
+                    <td>vypoceno_l</td>
+                    <td>vypocený pot v litrech</td>
+                </tr>
+                <tr>
+                    <td>dostupna_sportoviste</td>
+                    <td>dostupná sportoviště v okolí</td>
+                </tr>
+                <tr>
+                    <td>bezecka_trat</td>
+                    <td>běžecká trať v okolí</td>
+                </tr>
+                <tr>
+                    <td>plavecky_bazen</td>
+                    <td>plavecký bazén v okolí</td>
+                </tr>
+                <tr>
+                    <td>posilovna</td>
+                    <td>posilovna v okolí</td>
+                </tr>
+                <tr>
+                    <td>squash_hr</td>
+                    <td>squashové hřiště v okolí</td>
+                </tr>
+                <tr>
+                    <td>badminton_hr</td>
+                    <td>badmintonové hřiště v okolí</td>
+                </tr>
+                <tr>
+                    <td>tenis_kurt</td>
+                    <td>tenisový kurt v okolí</td>
+                </tr>
+                <tr>
+                    <td>tai_chi</td>
+                    <td>možnost cvičit tai-chi v okolí</td>
+                </tr>
+                <tr>
+                    <td>masaz</td>
+                    <td>možnost zajít na masáž v okolí</td>
+                </tr>
+                <tr>
+                    <td>trener</td>
+                    <td>trenér</td>
+                </tr>
+                <tr>
+                    <td>telefon</td>
+                    <td>telefon</td>
+                </tr>
+                <tr>
+                    <td>zeme</td>
+                    <td>země</td>
+                </tr>
+                <tr>
+                    <td>typ</td>
+                    <td>typ telefonu</td>
+                </tr>
+                <tr>
+                    <td>cislo</td>
+                    <td>číslo</td>
+                </tr>
+                <tr>
+                    <td>vytizenost</td>
+                    <td>vytíženost konkrétního trenéra</td>
+                </tr>
+                <tr>
+                    <td>plna_kapacita</td>
+                    <td>údaj, zda je čas trenéra plně vyčerpán</td>
+                </tr>
+                <tr>
+                    <td>volna_mista</td>
+                    <td>údaj, zda má trenér volná místa</td>
+                </tr>
+                <tr>
+                    <td>specializace</td>
+                    <td>specializace</td>
+                </tr>
+                <tr>
+                    <td>vzdelani</td>
+                    <td>dosažené vzdělání</td>
+                </tr>
+                <tr>
+                    <td>stupen</td>
+                    <td>stupeň</td>
+                </tr>
+                <tr>
+                    <td>skola</td>
+                    <td>škola</td>
+                </tr>
+                <tr>
+                    <td>fakulta</td>
+                    <td>fakulta</td>
+                </tr>
+                <tr>
+                    <td>rok_ukonceni</td>
+                    <td>rok ukončení</td>
+                </tr>
+                <tr>
+                    <td>praxe_v_oboru_roky</td>
+                    <td>jak dlouhou praxi v oboru má trenér v letech</td>
+                </tr>
+                <tr>
+                    <td>ochrana_soukromi</td>
+                    <td>nastavení ochrany soukromí</td>
+                </tr>
+                <tr>
+                    <td>viditelnost_profil</td>
+                    <td>nastavení viditelnosti profilu</td>
+                </tr>
+                <tr>
+                    <td>viditelnost_jmeno</td>
+                    <td>nastavení viditelnosti jména</td>
+                </tr>
+                <tr>
+                    <td>viditelnost_prijmeni</td>
+                    <td>nastavení viditelnosti příjmení</td>
+                </tr>
+                <tr>
+                    <td>viditelnost_vek</td>
+                    <td>nastavení viditelnosti věku</td>
+                </tr>
+                <tr>
+                    <td>viditelnost_zeme_pusobeni</td>
+                    <td>nastavení viditelnosti země působení</td>
+                </tr>
+                <tr>
+                    <td>navstevnik</td>
+                    <td>nastavení viditelnosti profilu pro návštěvníka,<br /> tedy jí tento profil nepatří</td>
+                </tr>
+                <tr>
+                    <td>viditelnost_osobni_udaje</td>
+                    <td>nastavení viditelnosti osobních údajů pro návštěvníka</td>
+                </tr>
+               
+            </table>
+        </article>
+    </section>
+    <section>
+        <article>
+            <h2 align="left" id="transformace"> Transformace </h2>
+            <p>
+                Pro tranformaci jsem z souboru xml vytvořila soubor xsl, nutný k transformaci. Pokus o transformaci z mého souboru xsl do JSON proběhl úspěšně.<br /> Javascript object notation (zkr. JSON) je standardizovaný formát dat pro komunikaci dvou či více vzájemně nekompatibilních systémů. Základem, jak již samotný název napovídá, je univerzální programovací jazyk javascript. Je využitelný pro přenos mezi mobilní aplikací a serverem, na kterém aplikace běží.
+            </p>
+        </article>
+    </section>
+    <section>
+        <article>
+            <h2 align="left" id="zaver"> Závěr </h2>
+            <p>
+                Tato práce mi dala zabrat, vůbec jsem netušila, jak začít, což na tom bylo naprosto nejtěžší. Nikdy předtím jsem s aplikacemi a formáty xml, xsl, transformacemi atd nepracovala. Za mě bych určitě potřebovala víc cvičení, takhle jsem z toho popravdě moc nepochytila a doučovala jsem se to doma.
+            </p>
+            <p>
+                Musím ale říct, že jakmile jsem přišla na to jak začít, šlo to už téměř samo. Každá další část projektu byla jednodušší. Tento projekt byl pro mne velmi poučný, naučila jsem toho spoustu o nových formátech, o provázanosti jednotlivých souborů, dále jsem rozšířila své znalosti co se týče programu Visual Studio, který mi byl velmi nápomocný.
+            </p>
+        </article>
+    </section>
+    <footer>
+        <p>______________________________________________________________________________________________________________________________________________________________________</p>
+        <article align="center">
+            <p> Tereza Vudarčíková </p>
+            <p> Systémové inženýrství </p>
+            <p> 2. ročník </p>
+            <p> Stupeň: bakalář </p>
+        </article>
+    </footer>
+</body>
+</html>

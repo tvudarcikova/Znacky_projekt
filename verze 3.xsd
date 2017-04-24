@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="aplikace">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nazev" type="xs:string" />
+        <xs:element name="uzivatel">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nickname" type="xs:string" />
+              <xs:element name="jmeno" type="xs:string" />
+              <xs:element name="prijmeni" type="xs:string" />
+              <xs:element name="vek" type="xs:unsignedByte" />
+              <xs:element name="zeme_pusobeni" type="xs:string" />
+              <xs:element name="osobni_udaje">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="jmeno" type="xs:string" />
+                    <xs:element name="prijmeni" type="xs:string" />
+                    <xs:element name="vyska_cm" type="xs:unsignedByte" />
+                    <xs:element name="vaha_kg" type="xs:unsignedByte" />
+                    <xs:element name="dat_nar" type="xs:string" />
+                    <xs:element name="sedave_zamestnani" type="xs:boolean" />
+                    <xs:element name="vysoky_tk" type="xs:boolean" />
+                    <xs:element name="bmi">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="hodnota" type="xs:string" />
+                          <xs:element name="kategorie" type="xs:string" />
+                          <xs:element name="zdravotni_riziko" type="xs:string" />
+                        </xs:sequence>
+                        <xs:attribute name="typ_z" type="xs:string" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="typ" type="xs:string" use="required" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="kontakt">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="facebook" type="xs:string" />
+                    <xs:element name="email" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="hlavni_oddil">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="aktivity">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="druh_pohybu" type="xs:string" />
+                          <xs:element name="distance_km" type="xs:unsignedByte" />
+                          <xs:element name="prevyseni_m" type="xs:unsignedByte" />
+                          <xs:element name="cas_minuty" type="xs:unsignedByte" />
+                          <xs:element name="dopocty">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="rychlost_kmh" type="xs:string" />
+                                <xs:element name="spalene_kcal" type="xs:unsignedByte" />
+                                <xs:element name="tepova_frq" type="xs:unsignedByte" />
+                                <xs:element name="vypoceno_l" type="xs:string" />
+                              </xs:sequence>
+                              <xs:attribute name="stroj" type="xs:string" use="required" />
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="poradi" type="xs:unsignedByte" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="dostupna_sportoviste">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="bezecka_trat" type="xs:boolean" />
+                          <xs:element name="plavecky_bazen" type="xs:boolean" />
+                          <xs:element name="posilovna" type="xs:boolean" />
+                          <xs:element name="squash_hr" type="xs:boolean" />
+                          <xs:element name="badminton_hr" type="xs:boolean" />
+                          <xs:element name="tenis_kurt" type="xs:boolean" />
+                          <xs:element name="tai_chi" type="xs:boolean" />
+                          <xs:element name="masaz" type="xs:boolean" />
+                        </xs:sequence>
+                        <xs:attribute name="popis_lokality" type="xs:string" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="trener">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="nickname" type="xs:string" />
+                          <xs:element name="jmeno" type="xs:string" />
+                          <xs:element name="prijmeni" type="xs:string" />
+                          <xs:element name="vek" type="xs:unsignedByte" />
+                          <xs:element name="zeme_pusobeni" type="xs:string" />
+                          <xs:element name="kontakt">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="email" type="xs:string" />
+                                <xs:element name="telefon">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="zeme" type="xs:string" />
+                                      <xs:element name="typ" type="xs:string" />
+                                      <xs:element name="cislo" type="xs:unsignedInt" />
+                                    </xs:sequence>
+                                    <xs:attribute name="num" type="xs:string" use="required" />
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="vytizenost">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="plna_kapacita" type="xs:boolean" />
+                                <xs:element name="volna_mista" type="xs:boolean" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="specializace" type="xs:string" />
+                          <xs:element name="vzdelani">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="stupen" type="xs:string" />
+                                <xs:element name="skola" type="xs:string" />
+                                <xs:element name="fakulta" type="xs:string" />
+                                <xs:element name="rok_ukonceni" type="xs:unsignedShort" />
+                                <xs:element name="praxe_v_oboru_roky" type="xs:unsignedByte" />
+                              </xs:sequence>
+                              <xs:attribute name="typ_vz" type="xs:string" use="required" />
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="ID" type="xs:unsignedInt" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="ochrana_soukromi">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="viditelnost_profil" type="xs:boolean" />
+                    <xs:element name="viditelnost_jmeno" type="xs:boolean" />
+                    <xs:element name="viditelnost_prijmeni" type="xs:boolean" />
+                    <xs:element name="viditelnost_vek" type="xs:boolean" />
+                    <xs:element name="viditelnost_zeme_pusobeni" type="xs:boolean" />
+                    <xs:element name="navstevnik">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="viditelnost_profil" type="xs:boolean" />
+                          <xs:element name="viditelnost_osobni_udaje" type="xs:boolean" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="level" type="xs:string" use="required" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="ID" type="xs:unsignedInt" use="required" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
